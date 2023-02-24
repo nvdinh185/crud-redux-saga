@@ -13,7 +13,7 @@ function addUser(data) {
     return new Promise((resolve, reject) => {
         let url = 'http://localhost:8080/users'
         let config = {
-            method: "POST",   
+            method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data),
         }
@@ -25,14 +25,14 @@ function addUser(data) {
 }
 
 function deleteUser(userId) {
-   
+
     return new Promise((resolve, reject) => {
         const url = 'http://localhost:8080/users/delete/' + userId.id
-        console.log(userId,'day la userid');
+        console.log(userId, 'day la userid');
         const config = {
             method: 'DELETE'
         }
-        
+
         fetch(url, config)
             .then(res => res.json())
             .then(res => resolve(res))
@@ -48,7 +48,7 @@ function updateUser(updateUser) {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(updateUser)
         }
- 
+
         fetch(url, config)
             .then(res => res.json())
             .then(res => resolve(res))
@@ -60,7 +60,7 @@ function searchUser(searchUser) {
     return new Promise((resolve, reject) => {
         let url = `http://localhost:8080/users/search?name=${searchUser}`
         let config = { method: "GET" }
-        fetch(url, config)  
+        fetch(url, config)
             .then(res => res.json())
             .then(res => resolve(res))
             .catch(error => reject(error))

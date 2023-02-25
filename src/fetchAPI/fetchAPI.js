@@ -25,7 +25,6 @@ function addUser(data) {
 }
 
 function deleteUser(userId) {
-
     return new Promise((resolve, reject) => {
         const url = 'http://localhost:8080/users/delete/' + userId.id
         console.log(userId, 'day la userid');

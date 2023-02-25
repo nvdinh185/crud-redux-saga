@@ -1,7 +1,7 @@
-import * as callAPI from '../fetchAPI/fetchAPI'
-import * as Actions from '../action'
-import { put, takeEvery } from 'redux-saga/effects'
-import * as types from '../constant'
+import * as callAPI from '../fetchAPI/fetchAPI';
+import * as Actions from '../action';
+import { put, takeEvery } from 'redux-saga/effects';
+import * as types from '../constant';
 
 function* handleGetUser() {
     try {
@@ -15,7 +15,6 @@ function* handleGetUser() {
 
     }
 }
-
 
 function* handleAddUser(action) {
     try {

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as Actions from '../action'
-import UserComponent from '../component/UserComponent'
-import { searchUser } from '../fetchAPI/fetchAPI';
+import * as Actions from '../action';
+import UserComponent from '../component/UserComponent';
 
 class UserContainer extends Component {
     componentDidMount() {
-        this.props.getUser()
+        this.props.getUser();
     }
 
     render() {

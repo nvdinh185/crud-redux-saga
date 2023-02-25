@@ -64,7 +64,6 @@ class userComponent extends Component {
         if (hocVien) {
 
             Arr = hocVien.map((item, index) => {
-                ;
                 return (
                     <div key={index}>
                         <div >{item.id}. {item.name} {''}
